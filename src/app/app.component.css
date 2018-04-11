@@ -1,0 +1,25 @@
+.sortable-item-background {
+    width: 200px;
+    background: blue;
+    margin-bottom: 5px;
+    padding: 5px;
+}
+
+.sortable-item {
+    width: 200px;
+     height: 20px;
+     text-align: center;
+     background: white;
+     cursor: pointer;
+ }
+
+ .moving {
+     opacity: 0.5;
+ }
+
+ .hovering {
+     width: 200px;
+     background: orange;
+     margin-bottom: 5px;
+     padding: 5px;
+ }

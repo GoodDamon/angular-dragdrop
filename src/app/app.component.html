@@ -1,0 +1,20 @@
+<button (click)="add()">Add item</button>
+<ul>
+    <li *ngFor="let item of myItems;index as i"
+        class="sortable-item-background"
+        (dragover)="dragover($event)"
+        (dragenter)="dragenter(i, $event)"
+        (dragleave)="dragleave($event)"
+        (drop)="drop(i, $event)"
+        [class.hovering]="hovering === i"
+    >
+        <div
+            draggable="true"
+            (dragstart)="dragstart(i, $event)"
+            (dragend)="dragend(i, $event)"
+            class="sortable-item"
+            [class.moving]="item.moving === true"
+        >{{item.name}}
+        </div>
+    </li>
+</ul>
